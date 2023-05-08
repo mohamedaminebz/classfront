@@ -22,6 +22,7 @@ return (
           type="email"
           name="email"
           value={email}
+          data-test="email"
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
@@ -31,11 +32,12 @@ return (
           type="password"
           name="password"
           value={password}
+          data-test="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div>
-        <button onClick={handleClick}>Se connecter</button>
+        <button data-test="connect" onClick={handleClick}>Se connecter</button>
       </div>
     </div>
   )

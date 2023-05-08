@@ -25,16 +25,17 @@ document.title=title;
 
   return (
     <form action="" className="form">
-      <input type="text" name="title" value={title} onChange={handleTitle} />
+      <input type="text" name="title" value={title} onChange={handleTitle} data-test="title"/>
       <br></br>
       <input
         type="number"
         name="duration"
         value={duration}
         onChange={handleDuration}
+        data-test="duration"
       />
       <br></br>
-      <button type="button" onClick={handleClick}>
+      <button type="button" onClick={handleClick} data-test="addTask">
         {addTasks}
       </button>
       {renderHello()}

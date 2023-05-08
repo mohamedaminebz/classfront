@@ -25,6 +25,7 @@ function Task({ title, duration, deleteTask, _id, updateTask }) {
   if (isUpdate === false) {
     return (
       <div
+      data-test={`task ${title}`} 
         className="task"
         style={{
           backgroundColor: "red",

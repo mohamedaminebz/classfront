@@ -36,16 +36,22 @@ function App() {
     return (
       <div className="app">
         <Router>
-          <Menu />
+     { /* <Menu />*/}
+     <Menu />
           <Routes>
             <Route
               path="/"
               element={<Navigate to="/teachers/tasks" replace />}
             />
-            <Route path="/hello" element={<Hello />} />
-            <Route path="teachers" element={<TeacherRoutes />} >
+               <Route path="teachers" element={<TeacherRoutes />} >
+             
+         <Route path="tasks" element={<TaskPage />} />
+        <Route path="tasks/:id" element={<TaskDetails />} /> 
+           {/* <Route path="/hello" element={<Hello />} />
+         
            <Route path="tasks" element={<TaskPage />} />
           <Route path="tasks/:id" element={<TaskDetails />} /> 
+        */}
           </Route>
           </Routes>
         </Router>
