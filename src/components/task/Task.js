@@ -1,10 +1,11 @@
 import "./task.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function Task({ title, duration, deleteTask, _id, updateTask }) {
   const [titleToUpdate, setTitleUpdate] = useState(title);
   const [isUpdate, setIsUpdate] = useState(false);
+  
   function handleUpdate() {
     setIsUpdate(true);
   }
